@@ -1,0 +1,2 @@
+# ideas
+- missing bracket checker
