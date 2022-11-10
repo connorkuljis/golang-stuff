@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func do() {
 	start := time.Now()
 	echo1()
 	echo2()
