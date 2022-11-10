@@ -5,20 +5,12 @@ import (
 	"strconv"
 )
 
-const (
-	InfoColor    = "\033[1;34m%s\033[0m"
-	NoticeColor  = "\033[1;36m%s\033[0m"
-	WarningColor = "\033[1;33m%s\033[0m"
-	ErrorColor   = "\033[1;31m%s\033[0m"
-	DebugColor   = "\033[0;36m%s\033[0m"
-)
+const InfoColor = "\033[1;34m%s\033[0m"
 
 func main() {
-	tri(5)
-}
-
-func tri(n int) int {
-	return triangularRecursive(n)
+	x := 5
+	fmt.Printf("triangular number where n=%d is %d\n", x, triangularRecursive(x))
+	fmt.Printf("%d * (%d + 1) / 2 = %d\n", x, x, triangularGeneral(x))
 }
 
 // triangular numbers using recursion
@@ -36,4 +28,8 @@ func triangularRecursive(n int) int {
 	fmt.Printf(InfoColor, call)
 
 	return rv
+}
+
+func triangularGeneral(n int) int {
+	return n * (n + 1) / 2
 }
